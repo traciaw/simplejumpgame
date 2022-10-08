@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 10;
+}
+
+#game{
+    width: 500px;
+    height: 200px;
+    border: 5px solid #6d6875;
+    background-color:#e9edc9 ;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color:#b5838d;
+    position: relative;
+    top: 150px;
+    /*animation: jump 500ms infinite; 
+    
+    if you input the above, the character will just keep jumping
+    at with no prompt,
+    thus creating another class below without infinite so that
+    can use JS to make it disapear*/
+}
+#message{
+    display:flex;
+    justify-content: center;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 28px;
+
+}
+.animate{
+    animation: jump 500ms;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    15%{top: 125px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    85%{top: 125px;}
+    100%{top: 150px;}
+}
+
+#ball{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2a9d8f;
+    position: relative;
+    top:95px;
+    left: 479px;
+    animation:block 1s infinite linear; /*infinite for continously, linear to be straight*/
+} 
+
+@keyframes block{
+    0%{left:480px;}
+    100%{left:-40px;}
+}
